@@ -178,7 +178,7 @@ anchor: parent
 bottom.px: 120
 left.px: 120
 
--- ftd.text: $member-email
+-- ftd.text: $member-email.title
 role: $inherited.types.copy-large
 color: $inherited.colors.text-strong
 
