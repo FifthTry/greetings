@@ -1,51 +1,187 @@
--- import: <user_name>.github.io/<repo_name>/assets
+-- import: fifthtry.github.io/greetings/assets
 
 
 
--- ds.page: Welcome to your [FASTN site](https://fastn.io/)
+-- ds.page: Greeting
+
+-- greeting:
+
+-- welcome-msg: Welcome
+message: TO THE TEAM
+
+-- company-logo:
+logo: https://www.fifthtry.com/-/fifthtry.com/assets/images/logo-fifthtry-dark.svg
+
+-- member-card:
+photo: $assets.files.assets.profile-pic.jpg
+
+-- member-name: Ayush Soni 
+
+-- member-email: ayush@fifthtry.com
+
+-- end: greeting
+
+-- end: ds.page
+
+
+
+
+
+
+
+
+
+
+-- component greeting:
+children childs:
+
+-- ftd.row:
+width.fixed.px: 800
+height.fixed.px: 1000
+children: $greeting.childs
+background.solid: #283655
+
+-- end: ftd.row
+
+-- end: greeting
+
+
+
+
+
+
+
+
+
+-- component company-logo:
+ftd.image-src logo:
 
 -- ftd.column:
+width.fixed.px: 320
+background.solid: rgba(255, 255, 255, 0.10)
+align-self: end
+height: fill-container
+padding-top.px: 48
+
+-- ftd.image:
+src: $company-logo.logo
+width.fixed.px: 220
+height: auto
 align-self: center
-
--- chat.message-left: Yo! I am Amit Upadhyay, CEO of FifthTry, welcome to the new world of FTD.
-
--- ds.markdown: 
-
-You reached the right place, and from here let me assure you, your FTD journey is going superfast. 🙂
-
--- end: chat.message-left
-
--- chat.message-right:  😊 Liking this chat component?
-
--- ds.markdown:
-
-[Click here to learn more](https://fifthtry.github.io/bling/chat/)
-👍
-
--- end: chat.message-right
 
 -- end: ftd.column
 
--- ds.h1: How to use?
-
-It's very simple like making a sandwich. Create new `.ftd` file and just say:
-
--- ds.code: `-- ds.page` 
-lang: ftd
-
-\-- ds.page: Your page title goes here
-
-Your page content goes here.
+-- end: company-logo
 
 
--- ds.h1: Need sidebar at right side of page?
-
-Here it is, [use this document](https://fifthtry.github.io/doc-site/docs/right-sidebar/).
 
 
--- ds.h1: 👀 Learn FTD and become a pro?
 
-You are one click away, just check [our documentation](https://fastn.dev/) and 
-dont forget to jump into our [FifthTry Discord server](https://discord.gg/bucrdvptYd).
 
--- end: ds.page
+
+
+
+
+-- component welcome-msg:
+caption title:
+string message:
+
+-- ftd.column:
+width: fill-container
+spacing.fixed.px: 16
+align-self: start
+
+-- ftd.text: $welcome-msg.title
+role: $inherited.types.heading-hero
+color: $inherited.colors.text-strong
+
+-- ftd.text:
+text: $welcome-msg.message
+role: $inherited.types.heading-large
+color: $inherited.colors.text-strong
+
+-- end: ftd.column
+
+-- end: welcome-msg
+
+
+
+
+
+
+
+
+
+
+-- component member-card:
+ftd.image-src photo:
+
+-- ftd.column:
+anchor: parent
+bottom.px: 60
+right.px: 60
+width.fixed.px: 475
+height.fixed.px: 708
+
+-- ftd.image:
+src: $member-card.photo
+width: fill-container
+height: fill-container
+border-radius.px: 10
+
+-- end: ftd.column
+
+-- end: member-card
+
+
+
+
+
+
+
+
+
+
+-- component member-name:
+caption title:
+
+-- ftd.column:
+background.solid: #4D648D
+padding.px: 16
+align-self: center
+anchor: parent
+bottom.px: 250
+right.px: 475
+
+-- ftd.text: $member-name.title
+role: $inherited.types.heading-medium
+color: $inherited.colors.text-strong
+
+-- end: ftd.column
+
+-- end: member-name
+
+
+
+
+
+
+
+
+
+
+-- component member-email:
+caption title:
+
+-- ftd.column:
+anchor: parent
+bottom.px: 120
+left.px: 120
+
+-- ftd.text: $member-email.title
+role: $inherited.types.copy-large
+color: $inherited.colors.text-strong
+
+-- end: ftd.column
+
+-- end: member-email
