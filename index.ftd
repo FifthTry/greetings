@@ -1,6 +1,5 @@
 -- import: fifthtry.github.io/greetings/assets
-
-
+-- import: fifthtry.github.io/greetings/fonts
 
 -- ds.page: Greeting
 
@@ -17,7 +16,7 @@ photo: $assets.files.assets.profile-pic.jpg
 
 -- member-name: Ayush Soni 
 
--- member-email: ayush@fifthtry.com
+-- member-email: `ayush@fifthtry.com`
 
 -- end: greeting
 
@@ -35,13 +34,13 @@ photo: $assets.files.assets.profile-pic.jpg
 -- component greeting:
 children childs:
 
--- ftd.row:
+-- ftd.column:
 width.fixed.px: 800
 height.fixed.px: 1000
 children: $greeting.childs
 background.solid: #283655
 
--- end: ftd.row
+-- end: ftd.column
 
 -- end: greeting
 
@@ -87,17 +86,19 @@ caption title:
 string message:
 
 -- ftd.column:
-width: fill-container
 spacing.fixed.px: 16
-align-self: start
+anchor: parent
+top.percent: 10
+left.px: 24
+width.fixed.px: 200
 
 -- ftd.text: $welcome-msg.title
-role: $inherited.types.heading-hero
+role: $fonts.lobster-size-54-type
 color: $inherited.colors.text-strong
 
 -- ftd.text:
 text: $welcome-msg.message
-role: $inherited.types.heading-large
+role: $inherited.types.heading-hero
 color: $inherited.colors.text-strong
 
 -- end: ftd.column
@@ -176,11 +177,13 @@ caption title:
 -- ftd.column:
 anchor: parent
 bottom.px: 120
-left.px: 120
+left.px: 24
+color: $inherited.colors.text-strong
+width: fill-container
 
 -- ftd.text: $member-email.title
-role: $inherited.types.copy-large
-color: $inherited.colors.text-strong
+role: $inherited.types.copy-regular
+align-self: start
 
 -- end: ftd.column
 

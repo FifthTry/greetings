@@ -1,0 +1,54 @@
+-- import: fifthtry.github.io/greetings/assets
+-- import: fifthtry.github.io/greetings/fonts
+-- import: fifthtry.github.io/greetings
+
+
+-- ds.page: Greeting
+
+
+-- greeting: Ayush Soni
+welcome-msg: welcome
+welcome-body: TO THE TEAM
+logo: https://www.fifthtry.com/-/fifthtry.com/assets/images/logo-fifthtry-dark.svg
+photo: $assets.files.assets.profile-pic.jpg
+email: ayush@fifthtry.com
+
+
+-- end: ds.page
+
+
+
+
+
+
+
+
+-- component greeting:
+caption title:
+string welcome-msg:
+string welcome-body:
+ftd.image-src logo:
+ftd.image-src photo:
+string email:
+
+-- ftd.column:
+width.fixed.px: 800
+height.fixed.px: 1000
+background.solid: #283655
+
+-- greetings.welcome-msg: $greeting.welcome-msg
+message: $greeting.welcome-body
+
+-- greetings.company-logo:
+logo: $greeting.logo
+
+-- greetings.member-card:
+photo: $greeting.photo
+
+-- greetings.member-name: $greeting.title
+
+-- greetings.member-email: $greeting.email
+
+-- end: ftd.column
+
+-- end: greeting
