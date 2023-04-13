@@ -3,7 +3,6 @@
 -- fastn.package: fifthtry.github.io/greetings
 
 -- fastn.dependency: fifthtry.github.io/doc-site as ds
--- fastn.dependency: fifthtry.github.io/bling as bling
-
--- fastn.auto-import: bling/chat as chat
 -- fastn.auto-import: ds
+
+-- fastn.dependency: fastn-community.github.io/lobster-font

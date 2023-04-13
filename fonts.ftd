@@ -1,0 +1,14 @@
+-- import: fastn-community.github.io/lobster-font/assets as lobster-assets
+
+
+
+
+
+
+-- ftd.type lobster-size-54-type:
+size.px: 54
+weight: 400
+font-family: $lobster-assets.fonts.Lobster
+font-style: italic
+
+-- ftd.responsive-type lobster-size-54-400: $lobster-size-54-type
